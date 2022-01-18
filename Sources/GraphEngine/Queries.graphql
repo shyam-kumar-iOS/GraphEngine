@@ -1,0 +1,229 @@
+query Pdp_detail($pdpDetailId: String!) {
+  pdp_detail(id: $pdpDetailId) {
+    version
+    page_name
+    store_id
+
+    config {
+      bg_color
+    }
+
+    data {
+      product_id
+    }
+
+    header_widgets {
+      toolbar {
+        widget_name
+
+        config {
+          show_back_icon
+          show_cart_icon
+          show_search_icon
+          show_share_icon
+        }
+      }
+    }
+
+    scroll_widgets {
+      widgets
+
+      media {
+        widget_name
+        position
+
+        config {
+          show_pagination_icon
+          show_whislist_icon
+          align_whislist_icon
+          media_aspect_ratio
+          image_content_mode
+        }
+
+        data {
+
+          urls {
+            media_id
+            url
+          }
+        }
+      }
+
+      product_name {
+        widget_name
+        position
+
+        config {
+          font_type
+          font_color
+          font_size
+          align
+        }
+
+        data {
+          product_name
+        }
+      }
+
+      reviews {
+        widget_name
+        position
+
+        config {
+          align
+          font_size
+          font_color
+          font_type
+          star_color
+          show_share_icon
+          align_share_icon
+        }
+
+        data {
+          average_rating
+          reviews_count
+        }
+      }
+
+      product_price {
+        widget_name
+        position
+
+        config {
+          align
+          show_selling_price
+          show_price
+          show_discount_price
+          regular_price_font_color
+          regular_price_font_size
+          regular_price_font_type
+          sale_price_font_size
+          sale_price_font_color
+          sale_price_font_type
+          discount_percentage_font_size
+          discount_percentage_font_color
+          discount_percentage_font_type
+        }
+
+        data {
+          regular_price
+          sale_price
+          price_range
+          inventory_quantity
+          discount_percentage
+        }
+      }
+
+      variant_horizontal {
+        widget_name
+        position
+
+        config {
+          show_title
+          title_font_size
+          title_font_color
+          title_font_type
+          show_value
+          value_font_size
+          value_font_color
+          value_font_type
+          show_size_chart
+        }
+
+        data {
+          options {
+            name
+            option_values
+          }
+        }
+      }
+
+      product_description {
+        widget_name
+        position
+
+        config {
+          content_font_size
+
+          readall {
+            readall_font_size
+            readall_font_type
+            readall_font_color
+          }
+
+          content_font_color
+          content_font_type
+
+          title {
+            show_title
+            align_title
+            title_font_size
+            title_font_color
+            title_font_type
+          }
+        }
+
+        data {
+          product_description
+          short_description
+        }
+      }
+
+      recently_viewed {
+        widget_name
+        position
+
+        config {
+          regular_price_font_size
+          regular_price_font_color
+          regular_price_font_type
+          sale_price_font_size
+          sale_price_font_color
+          sale_price_font_type
+          discount_percentage_font_size
+          discount_percentage_font_color
+          discount_percentage_font_type
+          product_name_font_color
+          product_name_font_type
+          product_name_font_size
+          show_wishlist
+          image_aspect_ratio
+          image_content_mode
+          display_no_of_product
+
+          title {
+            align_title
+            show_title
+            title_font_size
+            title_font_color
+            title_font_type
+          }
+        }
+      }
+    }
+
+    footer_widgets {
+      
+      add_to_cart {
+        widget_name
+
+        config {
+          align
+          show_buynow_button
+          show_addtocart_button
+          buynow_button_color
+          buynow_button_broder
+          buynow_button_text_color
+          addtocart_button_color
+          addtocart_button_broder
+          addtocart_button_text_color
+          show_addtocart_increase_qty
+          buynow_button_fontsize
+          addtocart_button_fontsize
+          buynow_button_font_type
+          addtocart_button_font_type
+        }
+      }
+    }
+  }
+}
